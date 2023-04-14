@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
+  padding: 0 16px;
+}
+
+header {
+  background-color: #447bf3;
+  background-color: #333;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(13, 97, 194, 0.3);
+}
+
+header input {
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-left: 8px;
+  height: 38px;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "", cursive;
+  font-weight: 200;
+}
+
+header h3 {
+  color: #fff;
+  font-family: "Bungee Inline", cursive;
+  font-weight: 100;
+  font-size:large;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Bungee Inline", cursive;
+  font-weight: 100;
+  font-size:medium;
+}
+
+footer {
+  position:fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #000;
+}
+.section {
+  /* background: #eea; */
+  background: #eee;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 20px;
+  width: 450px;
+  flex:1;
+  margin: 16px;
+  height: 70%;
+  position:relative;
+  float: left;
+}
+form.create-section {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 7px;
+  margin-left: 15px;
+  box-shadow: 0 1px 5px rgb(39, 73, 94);
+}
+
+form.create-note select {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: #333;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  font-weight: bold;
+  /* color: #447bf3; */
+}
+
+.section button {
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  background: #00000055;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 1px 3px rgba(22, 22, 22, 0.5);
+  cursor: pointer;
+  outline: none;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 380px;
+  margin: 18px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.3em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.note h5{
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+form.create-note {
+  position: relative;
+  width: 580px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(39, 73, 94);
+}
+form.create-section input,
+form.create-section textarea,
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: #333;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+
+}
+
+form.create-section button,
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  background: #00000055;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(22, 22, 22, 0.5);
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 5px;
+  /* margin-top: 8px; */
+}
+
+
+/* Login Page... */
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Auth-form {
+  width: 520px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
