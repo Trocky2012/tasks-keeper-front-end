@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import axios from 'axios';
 import Header from "./Header";
 import Footer from "./Footer";
-import Note from "./Note";
+//import Note from "./Note";
 import CreateArea from "./CreateArea";
 import CreateSection from "./CreateSection";
 import Section from "./Section";
 
-const URL = 'http://localhost:8080/';
+//const URL = 'http://localhost:8080/';
+const URL = 'https://timing-control.herokuapp.com/';
+
 
 function App() {
-  const DONE = "Done / Deleted";
+  //const DONE = "Done / Deleted";
   const [notes, setNotes] = useState([]);
   const [sections, setSections] = useState([]);
   const [user,setUser] = useState();
+  const [userNameLogged,setUserNameLogged] = useState("");
   const [isLoggedIn,setIsLoggedIn] = useState(false);
 
   function getFormattedDate(d){
@@ -125,6 +127,8 @@ function App() {
 
       if(user.fName.length > 1){
         setSections(user.sections);
+        const uName = user.fName+" "+user.lName;
+        setUserNameLogged(uName);
         //if((user.email).includes('.com')){
           axios
           .get(URL+'tknote/find-by-user-id/'+user.id)
@@ -146,7 +150,7 @@ function App() {
   return (
     <div>
       <div style={{flexDirection:"row"}}>
-        <Header getUser={getUser}/>
+        <Header getUser={getUser} userNameLogged={userNameLogged}/>
         {/* {isLoggedIn ? <p> {user.email} </p>: ""} */}
         
         <CreateSection onAdd={addSection} />
