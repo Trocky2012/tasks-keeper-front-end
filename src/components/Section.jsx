@@ -9,9 +9,9 @@ function Section(props) {
 
     const [notes, setNotes] = useState([]);
 
-    const loadDataOnlyOnce = () => {
-        setNotes(props.notes);
-      }
+    /* const loadDataOnlyOnce = () => {
+      setNotes(props.notes);
+    } */
 
     useEffect(() => setNotes(props.notes), [props.notes]);
 
@@ -30,7 +30,7 @@ function Section(props) {
 
     return (
       <div className="section"  
-            style={{color: (props.title=="Done / Deleted" ? '#BDBFBD' : '#333'), }}
+            style={{color: (props.title==="Done / Deleted" ? '#BDBFBD' : '#333'), }}
       >
         {notes.length < 1 ? 
         <Popup trigger={<button ><DeleteIcon /></button>}

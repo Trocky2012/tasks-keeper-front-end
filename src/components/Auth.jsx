@@ -50,9 +50,9 @@ const Auth = (props) => {
                 Submit
               </button></Link> 
             </div>
-            <p className="text-center mt-2">
+            {/* <p className="text-center mt-2">
               Forgot <a href="#">password?</a>
-            </p>
+            </p> */}
           </div>
         </form>
       </div>
