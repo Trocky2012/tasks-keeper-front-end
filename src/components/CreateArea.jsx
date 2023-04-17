@@ -89,9 +89,6 @@ function CreateArea(props) {
           />
         )}
 
-
-        
-
         <Zoom in={isExpanded}>
           <Fab type='submit' onClick={submitNote}>
             <AddIcon />

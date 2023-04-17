@@ -17,7 +17,6 @@ function Note(props) {
       <h6>{props.date}</h6>
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      {/* <p>{props.sectionTitle}</p> */}
       <Popup trigger={<button ><DeleteIcon /></button>}
           position="right center">
           <div >Delete this task?</div>

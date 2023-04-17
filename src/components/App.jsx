@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import axios from 'axios';
 import Header from "./Header";
 import Footer from "./Footer";
-//import Note from "./Note";
 import CreateArea from "./CreateArea";
 import CreateSection from "./CreateSection";
 import Section from "./Section";
 
 //const URL = 'http://localhost:8080/';
 const URL = 'https://timing-control.herokuapp.com/';
-
 
 function App() {
   //const DONE = "Done / Deleted";
@@ -114,7 +112,6 @@ function App() {
     });
   }
 
-
   async function getUser(email, password){
       await axios
          .get(URL+'tkuser/find-by-email?email='+email+'&pssd='+password)
@@ -145,14 +142,10 @@ function App() {
       }
   }
 
-
-
   return (
     <div>
       <div style={{flexDirection:"row"}}>
         <Header getUser={getUser} userNameLogged={userNameLogged}/>
-        {/* {isLoggedIn ? <p> {user.email} </p>: ""} */}
-        
         <CreateSection onAdd={addSection} />
       </div>
         <CreateArea onAdd={addNote} sections={sections}/>
@@ -176,22 +169,6 @@ function App() {
           />
         );
       })}
-
-      {/* {notes.map((noteItem, index) => {
-        return (
-          <Note
-            key={noteItem.id}
-            id={noteItem.id}
-            date={noteItem.date}
-            title={noteItem.title}
-            content={noteItem.content}
-            section={noteItem.section}
-            sectionTitle={noteItem.sectionTitle}
-            onDelete={deleteNote}
-          />
-        );
-      })} */}
-      
       <Footer />
     </div>
   );
